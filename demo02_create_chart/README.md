@@ -24,13 +24,14 @@ helm template .
 kubectl create ns socks-shop
 
 helm upgrade --install socks-shop ./socks-shop --namespace socks-shop
-get pods -n socks-shop -w
+kubectl get pods -n socks-shop -w
 http://localhost:8001/api/v1/namespaces/socks-shop/services/http:front-end:/proxy
 
 ### Идем на адрес любой ноды и проверяем, что магазин работает
-gcloud compute firewall-rules create sock-shop --allow tcp:<port>
+http://localhost:8001/api/v1/namespaces/socks-shop/services/http:front-end:/proxy
+<!-- gcloud compute firewall-rules create sock-shop --allow tcp:<port> -->
 
-### Вытаскиваем frontend в отдельный чарт
+<!-- ### Вытаскиваем frontend в отдельный чарт
 
 helm create frontend
 
@@ -68,7 +69,7 @@ helm upgrade --install frontend ./frontend --namespace socks-shop
 
 ### Генерируем документацию
 
-helm-docs md frontend
+helm-docs md frontend -->
 
 ### Пакуем в tgz
 

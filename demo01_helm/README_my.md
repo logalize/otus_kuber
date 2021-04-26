@@ -38,10 +38,10 @@ kubectl create ns harbor &&
 helm upgrade --install harbor harbor/harbor --namespace harbor
 
 8. # check UI
-http://localhost:8001/api/v1/namespaces/kube-system/services/http:ops-view-kube-ops-view:/proxy/
+http://localhost:8001/api/v1/namespaces/harbor/services/http:harbor-harbor-portal:/proxy
 
 9. # delete harbor chart and check UI
 helm delete harbor -n harbor
 
 10. # delete ops-view ui
-helm delete ops-view -n kube-system
+<!-- helm delete ops-view -n kube-system -->
