@@ -12,7 +12,7 @@ kubecfg show workers.jsonnet
 ### Применяем
 
 kubecfg update workers.jsonnet
-http://localhost:40541/api/v1/namespaces/default/services/http:worker01:8000/proxy/
+http://localhost:8001/api/v1/namespaces/default/services/http:worker01:8000/proxy/
 
 ### Смотрим node port и идем в браузер
 
@@ -28,6 +28,6 @@ minikube: minikube service worker01 -->
 kubecfg update workers.jsonnet
 
 ### Смотрим node port и идем в браузер
-http://localhost:40541/api/v1/namespaces/default/services/http:worker02:8000/proxy/
+http://localhost:8001/api/v1/namespaces/default/services/http:worker02:8000/proxy/
 <!-- kubectl get svc
 kubectl get nodes -o wide -->

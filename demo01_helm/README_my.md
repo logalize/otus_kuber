@@ -5,8 +5,11 @@ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bas
 # Install public charts
 
 ## ops-view and harbor
+
 - check ssh-tunnel
+
 - check kubectl proxy
+
 - check kubectl
 
 1. # add repos
@@ -18,7 +21,9 @@ helm repo update
 2. # inspect values
 helm inspect values stable/kube-ops-view > kube-ops-view.yaml
 vim kube-ops-view.yaml:
+
 - rbac: true
+
 - ingress: true
 
 3. # install ops-view chart
